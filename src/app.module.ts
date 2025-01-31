@@ -2,12 +2,9 @@ import { Module, MiddlewareConsumer, RequestMethod } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { getTypeOrmConfig } from './config/database.config';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { UsuariosModule } from './usuarios/usuarios.module';
 import { ProyectosModule } from './proyectos/proyectos.module';
 import { UsuariosProyectosModule } from './usuarios-proyectos/usuarios-proyectos.module';
-import { RolesModule } from './roles/roles.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthMiddleware } from './auth/auth.middleware';
 @Module({
@@ -23,11 +20,8 @@ import { AuthMiddleware } from './auth/auth.middleware';
     UsuariosModule,
     ProyectosModule,
     UsuariosProyectosModule,
-    RolesModule,
     AuthModule
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+  ]
 })
 // eslint-disable-next-line prettier/prettier
 export class AppModule {

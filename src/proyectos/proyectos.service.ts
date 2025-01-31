@@ -31,7 +31,6 @@ export class ProyectosService {
                 return [];
             }
         } catch (error) {
-            console.log('Error al consultar: ', error);
             throw new HttpException('Error al obtener los proyectos', error);
 
         }
@@ -59,7 +58,6 @@ export class ProyectosService {
                 return [];
             }
         } catch (error) {
-            console.log('Error al consultar: ', error);
             throw new HttpException('Error al obtener los proyectos', error);
         }
     }

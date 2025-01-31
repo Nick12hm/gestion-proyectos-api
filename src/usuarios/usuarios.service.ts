@@ -13,8 +13,6 @@ export class UsuariosService {
     ) { }
 
     findAll(): Promise<Usuarios[]> {
-        console.log('entra a tomar  datos');
-
         return this.usuariosRepository.find();
     }
 
@@ -28,7 +26,6 @@ export class UsuariosService {
 
             return usuariosAdm;
         } catch (error) {
-            console.log('Error al consultar: ', error);
             throw new HttpException('Error al obtener los usuarios', error);
         }
     }
@@ -42,7 +39,6 @@ export class UsuariosService {
             });
             return usuariosAdm;
         } catch (error) {
-            console.log('Error al consultar: ', error);
             throw new HttpException('Error al obtener los usuarios', error);
         }
     }

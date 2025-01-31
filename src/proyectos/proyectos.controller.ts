@@ -19,7 +19,11 @@ export class ProyectosController {
         return this.proyectosService.findAll();
     }
 
-    @Get('filter') // Nueva ruta para obtener los últimos tres proyectos
+    /**
+     * Estw end-point obtiene los 3 ultimos registros de la tabla 
+     * @returns array de objetos
+     */
+    @Get('filter')
     findLastThree(): Promise<any[]> {
         return this.proyectosService.findLastThree();
     }
