@@ -81,7 +81,8 @@ export class ProyectosService {
         return this.findOne(id);
     }
 
-    async remove(id: number): Promise<void> {
+    async remove(id: number): Promise<any> {
         await this.proyectosRepository.delete(id);
+        return id;
     }
 }

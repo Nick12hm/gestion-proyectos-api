@@ -64,7 +64,7 @@ export class ProyectosController {
     }
 
     @Delete(':id')
-    remove(@Param('id') id: number): Promise<void> {
+    remove(@Param('id') id: number): Promise<Proyectos> {
         return this.proyectosService.remove(id);
     }
 }
